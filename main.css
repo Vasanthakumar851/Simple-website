@@ -83,31 +83,10 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/*Content*/
+/*about us*/
 
-.content{
-    background-color:gray;
-    width: 100%;
-    display: flex;
-    height: auto;
-    margin: 10px auto 0 auto;
-    padding: 10px;
-}
-.text{
 
-}
-.content img{
-    height: 200px;
-    border-radius: 10px;
-}
-.content h1{
-    margin: 0;
-    color: black;
-}
-.content p{
-    color: black;
-    margin-right: 10px;
-}
+
 /*IMagea*/
 
 .image{
@@ -144,7 +123,8 @@ header{
     margin: auto;
     display: block;
 }
-.image header::after{width: 60%; transition: width 0.1s linear;}
+.image header::after{width: 50%; transition: width 0.1s linear;}
+.image header:hover:after{width: 100%; transition: width 0.1s linear;}
 
 @media (max-width:700px){
     .toggle-button{
@@ -203,7 +183,7 @@ header{
     margin: auto;
     display: block;
 }
-#header1::after{width: 10%; transition: width 0.1s linear;}
+#header1::after{width: 5%; transition: width 0.1s linear;}
   body{
     background-color: antiquewhite;
   }
@@ -293,6 +273,7 @@ iframe{
   width: 90%;
 }
 
+/******** footer *************/
 .footer{
     width: 100%;
     height:65px; 
@@ -312,3 +293,121 @@ iframe{
 .footer h5{
     text-align: center;
 }
+
+
+.hero{
+    background-color: #f8f8f8;
+    overflow: hidden;
+  }
+  .heading h1{
+    text-align: center;
+    font-size: 26px;
+    font-style: italic;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 20px;
+  }
+  .heading h1::after{
+    content: '';
+    width:0;
+    height: 2px;
+    background-color: coral;
+    margin: auto;
+    display: block;
+}
+.heading h1::after{width: 5%; transition: width 0.1s linear;}
+  body{
+    background-color: antiquewhite;
+  }
+  .container-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    min-height: 65vh;
+    margin: 65px auto;
+    padding: 20px;
+  }
+  .hero-content{
+    flex: 1;
+    width: 600px;
+    margin: 0px 25px;
+    animation: fadeInUp 2s ease;
+  }
+  .hero-content h2{
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  .hero-content p{
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+    color: #666;
+    text-align: justify;
+  }
+  .hero-content button:hover{
+    background-color: #ff6347;
+    transform: scale(1.1);
+  }
+  .hero-img{
+    flex: 1;
+    width: 600px;
+    margin: auto;
+    animation: fadeInRight 2s ease;
+  }
+  .hero-img img{
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  @media screen and (max-width:900px){
+    .heading h1{
+      margin-top: 30px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .hero{
+      margin: 0;
+    }
+    .container-about{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      padding: 10px auto;
+    }
+    .hero-content{
+      width: 100%;
+      margin: 30px 0;
+    }
+    .hero-content h2{
+      font-size: 30px;
+      text-align: center;
+    }
+    .hero-img img{
+      width: 100%;
+      margin:0 auto;
+    }
+  }
+  @keyframes fadeInUp{
+    0%{
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100%{
+      opacity: 0;
+      transform: translateY(0px);
+    }
+  }
+  @keyframes fadeInRight{
+    0%{
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
