@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         *{
             margin: 0;
@@ -13,76 +12,96 @@
         }
         .container{
             width: 100%;
-            height: 200px;
-            background-color: rgb(235, 196, 181);
+            height: 400px;
+            background-color: black;
         }
-        .head h1{
+        .container img{
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            opacity: 0.3;
+        }
+        .container{
+            position: relative;
+        }
+        .banner-text{
+            width: 70%;
+            height: 320px;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            color: #fff;
+            transform: translate(-50%,-50%);
+        }
+        .banner-text h1{
+            color: white;
             text-align: center;
-            padding: 20px;
-            text-transform: uppercase;
-            font-size: 26px;
-            font-style: italic;
-            font-weight: normal;
+            font-family: 'Courier New', Courier, monospace;
         }
-        .head h1::after{
+        .banner-text h1::after{
             content: '';
-            width: 0;
+            width: 100px;
             height: 2px;
             background-color: coral;
-            margin: auto;
             display: block;
+            margin: auto;
         }
-        .head h1::after{
-            width: 100px;
+        .banner-text h1:hover:after{
+            width: 25%;
             transition: width 0.5s linear;
-        
         }
-        .services{
-            width: 80%;
-            height: 100px;
-            margin: 0 auto;
-            background-color: aliceblue;
-            border-radius: 10px;
+        .banner-text ul li{
+            padding: 10px;
+            text-align: justify;
+
+        }
+        .flex{
             display: flex;
+            justify-content:space-between;
+            margin-top: 20px;
             flex-wrap: wrap;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .services i{
-            font-size: 20px;
-            margin-right: 10px;
         }
         @media screen and (max-width:900px){
-            .services{
-                width: 90%;
-                height: 100px;
+            .container{
+                width: 100%;
+                height:500px;
+            }
+            .container img{
+                height: 500px;
+            }
+            .banner-text{
+                margin-top: -90px;
+            }
+            .banner-text h1:hover:after{
+                width:65%;
+                transition: width 0.5s linear;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="head">
-            <h1>Our Services</h1>
-        </header>
-        <div class="services">
-            <div>
-                <i class="fa-solid fa-handshake"></i>
-                <h2 style="display: inline;">Meeting</h2>
-            </div>
-            <div>
-                <i class="fa-solid fa-battery-full"></i>
-                <h2 style="display: inline;">Power Backup</h2>
-            </div>
-            <div>
-                <i class="fa-solid fa-globe"></i>
-                <h2 style="display: inline;">High-speed internet</h2>
-            </div>
-            <div>
-                <i class="fa-solid fa-fan"></i>
-                <h2 style="display: inline;">fully air conditional</h2>
+        <img src="./assect/images/office-board.jpg" alt="">
+        <div class="banner-text">
+            <h1>HOW IT WORK</h1>
+            <div class="flex">
+                <div>
+                    <ul style="list-style-type:'\1F44D'">
+                        <li>plug and play office with 24*7 access asddddddds asd</li>
+                        <li>plug and play office with 24*7 access</li>
+                        <li>plug and play office with 24*7 access</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul style="list-style-type:'\1F44D'">
+                        <li>plug and play office with 24*7 access asddddddds asd</li>
+                        <li>plug and play office with 24*7 access</li>
+                        <li>plug and play office with 24*7 access</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+    
 </body>
 </html>

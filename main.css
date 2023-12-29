@@ -59,9 +59,11 @@
     width: 100%;
     height: 500px;
     background-size: cover;
-    opacity: 0.9;
+    opacity: 0.4;
 }
 .main{
+    background-color: #333;
+    height: 500px;
     position: relative;
 }
 .banner-text{
@@ -99,13 +101,13 @@
 }
 .heading h1::after{
   content: '';
-  width:0;
+  width:3%;
   height: 2px;
   background-color: coral;
   margin: auto;
   display: block;
 }
-.heading h1::after{width: 5%; transition: width 0.1s linear;}
+.heading h1:hover::after{width: 10%; transition: width 0.1s linear;}
 body{
   background-color: antiquewhite;
 }
@@ -179,6 +181,10 @@ body{
     text-align: center;
     width: 100%;
   }
+  .heading h1:hover::after{width: 24%; transition: width 0.1s linear;}
+body{
+  background-color: antiquewhite;
+}
 }
 /*********about us***************/
 
@@ -199,16 +205,15 @@ body{
 }
 .head-our h1::after{
   content: '';
-  width: 0;
+  width: 50px;
   height: 2px;
   background-color: coral;
   margin: auto;
   display: block;
 }
-.head-our h1::after{
-  width: 100px;
+.head-our h1:hover::after{
+  width: 15%;
   transition: width 0.5s linear;
-
 }
 .services-our{
   width: 80%;
@@ -228,6 +233,10 @@ body{
   .services-our{
       width: 90%;
       height: 100px;
+  }
+  .head-our h1:hover::after{
+    width: 40%;
+    transition: width 0.5s linear;
   }
 }
 /************Our Services***********/
@@ -279,6 +288,9 @@ header{
         width: 100%;
         height: 300px;
     }
+    .main{
+      height: 300px;
+    }
     .brand-logo img{padding: 5px;}
     .navbar-links{
         display: none;
@@ -323,13 +335,13 @@ header{
   }
   #header1::after{
     content: '';
-    width:0;
+    width:5%;
     height: 2px;
     background-color: coral;
     margin: auto;
     display: block;
 }
-#header1::after{width: 5%; transition: width 0.1s linear;}
+#header1:hover::after{width: 15%; transition: width 0.1s linear;}
   body{
     background-color: antiquewhite;
   }
@@ -381,7 +393,7 @@ header{
       width: 90%;
       margin: 8px 10px;
     }
-    #header1::after{width: 20%; transition: width 0.1s linear;}
+    #header1:hover::after{width: 40%; transition: width 0.1s linear;}
     }
 /***********Enquiry*************/
 
@@ -406,14 +418,14 @@ header{
 }
 .map h1::after{
   content:'';
-  width: 0;
+  width: 30%;
   height: 2px;
   background-color: coral;
   margin: auto;
   display: block;
 }
-.map h1::after{
-  width: 50%;
+.map h1:hover::after{
+  width: 100%;
   transition: 0.5s linear;
 }
 iframe{
@@ -442,3 +454,74 @@ iframe{
     text-align: center;
 }
 /******** footer *************/
+
+
+
+
+.container{
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}
+.container img{
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  opacity: 0.3;
+}
+.container{
+  position: relative;
+}
+.banner-text1{
+  width: 70%;
+  height: 320px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  color: #fff;
+  transform: translate(-50%,-50%);
+}
+.banner-text1 h1{
+  color: white;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.banner-text1 h1::after{
+  content: '';
+  width: 100px;
+  height: 2px;
+  background-color: coral;
+  display: block;
+  margin: auto;
+}
+.banner-text1 h1:hover:after{
+  width: 25%;
+  transition: width 0.5s linear;
+}
+.banner-text1 ul li{
+  padding: 10px;
+  text-align: justify;
+
+}
+.flex{
+  display: flex;
+  justify-content:space-between;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width:900px){
+  .container{
+      width: 100%;
+      height:500px;
+  }
+  .container img{
+      height: 500px;
+  }
+  .banner-text1{
+      margin-top: -90px;
+  }
+  .banner-text1 h1:hover:after{
+      width:65%;
+      transition: width 0.5s linear;
+  }
+}
