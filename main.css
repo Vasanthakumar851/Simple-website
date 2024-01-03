@@ -61,10 +61,6 @@
   .toggle-button{
       display: flex;
   }
-  .main img{
-      width: 100%;
-      height: 300px;
-  }
   .main{
     height: 300px;
   }
@@ -111,10 +107,11 @@
   background-image: url(./assect/images/office-front-gate.jpg);
   background-size:cover;
   background-position:center;
-  background-color:black;
+  background-color:gray;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-blend-mode:multiply;
 }
 .banner-text h1{
   color: white;
@@ -228,6 +225,8 @@ background-color: antiquewhite;
 width: 100%;
 height: 300px;
 background-image: url(/assect/images/office-board.jpg);
+background-color: gray;
+background-blend-mode:multiply;
 background-position: center;
 background-size: cover;
 display: flex;
