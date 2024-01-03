@@ -363,13 +363,13 @@ transition: width 0.5s linear;
     transition: width 0.5s linear;
 }
 }
-@media screen and (max-width:653px){
+@media screen and (max-width:300px){
   .box-container{
-    width: 200px;
-    margin: 0 auto;
+    width: 250px;
+    margin-left: -35px;
   }
   .box-container .card{
-    width: 200px;
+    width: 250px;
     margin: 0 auto;
   }
 }
@@ -471,6 +471,13 @@ header{
 }
 .image header::after{width: 10%; transition: width 0.1s linear;}
 .image header:hover:after{width: 20%; transition: width 0.1s linear;}
+
+@media screen and (max-width:300px){
+  .image img{
+    width: 240px;
+    margin-left: -35px;
+  }
+}
 
 
 /************Image****************/
