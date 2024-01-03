@@ -10,6 +10,8 @@
   background-color: 
 #8f4f17;
   color: white;
+  position: fixed;
+  width: 100%;
 }
 .brand-logo img{
   width: 100px;
@@ -98,30 +100,27 @@
       color: yellowgreen;
       text-align: center;
   }
+  .navbar{
+    position: relative;
+  }
 }
 /**************main content*******************/
-.main img{
+.main{
   width: 100%;
   height: 500px;
-  background-size: cover;
-  opacity: 0.4;
-}
-.main{
-  background-color: #333;
-  height: 500px;
-  position: relative;
-}
-.banner-text{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: #fff;
-  transform: translate(-50%,-50%);
+  background-image: url(./assect/images/office-front-gate.jpg);
+  background-size:cover;
+  background-position:center;
+  background-color:black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner-text h1{
   color: white;
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
+  margin-top: 35px;
 }
 .banner-text p{
   font-size: 15px;
@@ -129,7 +128,11 @@
   text-align: center;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+@media screen and (max-width:900px){
+  .main{
+    height: 300px;
+  }
+}
 /*********about us***************/
 
 .hero{
@@ -223,26 +226,14 @@ background-color: antiquewhite;
 
 .container{
 width: 100%;
-height: 400px;
-background-color: black;
-}
-.container img{
-width: 100%;
-height: 400px;
+height: 300px;
+background-image: url(/assect/images/office-board.jpg);
+background-position: center;
 background-size: cover;
-opacity: 0.3;
-}
-.container{
-position: relative;
-}
-.banner-text1{
-width: 70%;
-height: 320px;
-position: absolute;
-top: 60%;
-left: 50%;
-color: #fff;
-transform: translate(-50%,-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
 }
 .banner-text1 h1{
 color: white;
@@ -264,6 +255,7 @@ transition: width 0.5s linear;
 .banner-text1 ul li{
 padding: 10px;
 text-align: justify;
+margin-right: 40px;
 
 }
 .flex{
@@ -273,26 +265,25 @@ margin-top: 20px;
 flex-wrap: wrap;
 }
 @media screen and (max-width:900px){
-.container{
-    width: 100%;
-    height:500px;
-}
-.container img{
-    height: 500px;
-}
-.banner-text1{
-    margin-top: -90px;
-}
-.banner-text1 h1:hover:after{
-    width:65%;
-    transition: width 0.5s linear;
-}
-}
-@media screen and (max-width:653px){
-  .banner-text1{
-    margin-top: -130px;
-}  
-}
+  .container{
+      width: 100%;
+      height:450px;
+  }
+  .banner-text1 h1:hover:after{
+      width:35%;
+      transition: width 0.5s linear;
+  }
+  .flex ul{
+    margin-left: 200px;
+  }
+  }
+  @media screen and (max-width:653px){
+    .flex ul{
+      margin-left: 30px;
+    }
+  }
+
+  
 
 /*********How its works***************/
 
@@ -449,8 +440,6 @@ font-size: 20px;
 .image{
   width: 60%;
   height: auto;
-  display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
   margin: 15px auto;
   text-align: center;
@@ -471,9 +460,6 @@ font-size: 20px;
 }
 header{
   text-align: center;
-  position: absolute;
-  text-align: center;
-  font-size: 26px;
   text-transform: uppercase;
 }
 .image header::after{
@@ -484,8 +470,8 @@ header{
   margin: auto;
   display: block;
 }
-.image header::after{width: 50%; transition: width 0.1s linear;}
-.image header:hover:after{width: 100%; transition: width 0.1s linear;}
+.image header::after{width: 10%; transition: width 0.1s linear;}
+.image header:hover:after{width: 20%; transition: width 0.1s linear;}
 
 
 /************Image****************/
